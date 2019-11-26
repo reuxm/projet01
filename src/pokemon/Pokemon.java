@@ -28,8 +28,10 @@ public abstract class Pokemon {
 		this.life = Math.max(life,  0);
 	}
 	
+	public abstract String getType();
+	
 	public void attaquer() {
-		System.out.println(this.name+" utilise une attaque "+this.type);
+		System.out.println(this.name+" utilise une attaque "+getType());
 	}
 	
 	public static int globalPopulationSize() {
@@ -44,7 +46,12 @@ public abstract class Pokemon {
 	
 	@Override
 	public String toString() {
-		return this.getClass().getName()+" ---\nname : "+name+"\nlife : "+life+"\ntype : "+type;
+		return "Espece : "+this.getClass().getSimpleName()+" {\n"
+				+ "\tname : "+name+"\n"
+				+ "\tlife : "+life+"\n"
+				+ "\ttype : "+getType()
+				+ "}"
+		;
 		
 	}
 	
