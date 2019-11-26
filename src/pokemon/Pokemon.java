@@ -1,5 +1,7 @@
 package pokemon;
 
+import java.util.ArrayList;
+
 public abstract class Pokemon {
 	protected String name;
 	protected int life;
@@ -32,6 +34,12 @@ public abstract class Pokemon {
 	
 	public static int globalPopulationSize() {
 		return numberpokemon;
+	}
+	
+	public static void displayPokemon(ArrayList<Pokemon> pokemons) {
+		for (Pokemon pokemon :pokemons) {
+			System.out.println(pokemon);
+		}
 	}
 	
 	@Override

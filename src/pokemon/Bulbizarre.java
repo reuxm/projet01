@@ -2,7 +2,6 @@ package pokemon;
 
 public class Bulbizarre extends Pokemon {
 
-	String type = "grass";
 	private static int number = 0;
 	
 	public Bulbizarre( ) {
@@ -13,6 +12,7 @@ public class Bulbizarre extends Pokemon {
 		super();
 		this.name = name;
 		this.life = life;
+		this.type = "grass";
 		number++;
 	}
 	

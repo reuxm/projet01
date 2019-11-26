@@ -2,7 +2,6 @@ package pokemon;
 
 public class Salameche extends Pokemon {
 
-	String type = "fire";
 	private static int number = 0;
 	
 	public Salameche() {
@@ -13,6 +12,7 @@ public class Salameche extends Pokemon {
 		super();
 		this.name = name;
 		this.life = life;
+		this.type = "fire";
 		number++;
 	}
 	

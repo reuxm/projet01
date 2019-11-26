@@ -2,7 +2,6 @@ package pokemon;
 
 public class Carapuce extends Pokemon {
 
-	String type = "water";
 	private static int number = 0;
 	
 	public Carapuce() {
@@ -13,6 +12,7 @@ public class Carapuce extends Pokemon {
 		super();
 		this.name = name;
 		this.life = life;
+		this.type = "water";
 		number++;
 	}
 	
