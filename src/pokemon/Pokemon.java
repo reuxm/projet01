@@ -1,9 +1,14 @@
 package pokemon;
 
-public class Pokemon {
+public abstract class Pokemon {
 	protected String name;
 	protected int life;
 	protected String type;
+	private static int numberpokemon;
+	
+	protected Pokemon() {
+		numberpokemon++;
+	}
 	
 	public String getName() {
 		return this.name;
@@ -24,4 +29,15 @@ public class Pokemon {
 	public void attaquer() {
 		System.out.println(this.name+" utilise une attaque "+this.type);
 	}
+	
+	public static int globalPopulationSize() {
+		return numberpokemon;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getClass().getName()+" ---\nname : "+name+"\nlife : "+life+"\ntype : "+type;
+		
+	}
+	
 }

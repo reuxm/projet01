@@ -2,7 +2,7 @@ package pokemon;
 
 public class Bulbizarre extends Pokemon {
 
-	public static String type = "grass";
+	String type = "grass";
 	private static int number = 0;
 	
 	public Bulbizarre( ) {
@@ -10,8 +10,13 @@ public class Bulbizarre extends Pokemon {
 	}
 	
 	public Bulbizarre(String name, int life) {
+		super();
 		this.name = name;
 		this.life = life;
 		number++;
+	}
+	
+	public static int populationLength() {
+		return number;
 	}
 }
