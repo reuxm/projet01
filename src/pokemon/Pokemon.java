@@ -28,7 +28,7 @@ public abstract class Pokemon {
 		this.life = Math.max(life,  0);
 	}
 	
-	public abstract String getType();
+	public abstract String getType();// depends for each subClass
 	
 	public void attaquer() {
 		System.out.println(this.name+" utilise une attaque "+getType());

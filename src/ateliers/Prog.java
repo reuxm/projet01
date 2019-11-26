@@ -114,7 +114,7 @@ public class Prog {
 		//a = b;//not allowed
 	}
 
-	public void atelier6() {
+	public void atelier6() {//some String equality tests
 		String s  = "Chaîne de caractères";
 		String s2 = new String("Une autre chaîne de caractères");
 		String s3 = new String("Chaîne de caractères");
@@ -137,14 +137,14 @@ public class Prog {
 		System.out.println(s.indexOf('i'));
 	}
 
-	public void atelier7() {
+	public void atelier7() {//Some math lib tests
 		System.out.println(Math.min(2,  3));
 		System.out.println(Math.max(2,  3));
 		System.out.println(Math.abs(-3));
 		System.out.println(Math.random());
 	}
 
-	public void atelier8() {
+	public void atelier8() {//boolean/conditional tests now...
 
 		boolean a = true;
 		boolean b = false;
@@ -188,7 +188,7 @@ public class Prog {
 		}
 	}
 	
-	public void atelier9() {
+	public void atelier9() {//loop tests now...
 		int i = 1;
 		while(i <= 5) {
 			System.out.println(i);
@@ -204,7 +204,7 @@ public class Prog {
 		}
 	}
 	
-	public void atelier10() {
+	public void atelier10() {//hey! array tests!
 		String[] pokemons = {"Pikachu","Bulbizare","Salameche","Carapuce","Racaillou"};
 		Arrays.parallelSort(pokemons);
 		for(String p : pokemons) {
@@ -228,10 +228,10 @@ public class Prog {
 		}
 	}
 	
-	public void atelier11() {
+	public void atelier11() {//guess a number without hint
 		int goal = (int)(10*Math.random());
 		int tries = 5;
-		int guess = -1;
+		int guess = -1;//value doesn't matter, just for the sake of init
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Règles :\n" + 
@@ -240,7 +240,7 @@ public class Prog {
 				"Veuillez entrer votre pseudo :");
 		String pseudo = sc.nextLine();
 		
-		while(guess != goal && tries>0) {
+		while(guess != goal && tries>0) {//until good guess or no try left
 			System.out.print("Essais restants : "+tries+"\nTa proposition : ");
 			guess = sc.nextInt();
 			tries--;
@@ -248,6 +248,6 @@ public class Prog {
 		
 		System.out.println(pseudo+(guess==goal?" WIN":" LOOSE"));
 		
-		sc.close();
+		sc.close();//mandatory
 	}
 }
